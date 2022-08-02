@@ -49,37 +49,6 @@
 				}
 			},
 			"response": []
-		},
-		{
-			"name": "post /register",
-			"request": {
-				"method": "POST",
-				"header": [],
-				"body": {
-					"mode": "raw",
-					"raw": "{\r\n    \"username\": \"{{$randomUserName}}\",\r\n    \"email\": \"{{$randomEmail}}\",\r\n    \"password\": \"{{$randomPassword}}\"\r\n}",
-					"options": {
-						"raw": {
-							"language": "json"
-						}
-					}
-				},
-				"url": {
-					"raw": "https://try.vikunja.io/api/v1/register",
-					"protocol": "https",
-					"host": [
-						"try",
-						"vikunja",
-						"io"
-					],
-					"path": [
-						"api",
-						"v1",
-						"register"
-					]
-				}
-			},
-			"response": []
 		}
 	]
 }
