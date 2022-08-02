@@ -7,26 +7,13 @@
 	},
 	"item": [
 		{
-			"name": "post /login",
-			"event": [
-				{
-					"listen": "test",
-					"script": {
-						"exec": [
-							"pm.test(\"Status code is 200\", function () {\r",
-							"    pm.response.to.have.status(200);\r",
-							"});"
-						],
-						"type": "text/javascript"
-					}
-				}
-			],
+			"name": "post /register",
 			"request": {
 				"method": "POST",
 				"header": [],
 				"body": {
 					"mode": "raw",
-					"raw": "{\r\n    \"username\": \"{{username}}\",\r\n    \"password\": \"{{password}}\",\r\n    \"long_token\": false\r\n}",
+					"raw": "{\r\n    \"username\": \"{{$randomUserName}}\",\r\n    \"email\": \"{{$randomEmail}}\",\r\n    \"password\": \"{{$randomPassword}}\"\r\n}",
 					"options": {
 						"raw": {
 							"language": "json"
@@ -34,7 +21,7 @@
 					}
 				},
 				"url": {
-					"raw": "https://try.vikunja.io/api/v1/login",
+					"raw": "https://try.vikunja.io/api/v1/register",
 					"protocol": "https",
 					"host": [
 						"try",
@@ -44,7 +31,7 @@
 					"path": [
 						"api",
 						"v1",
-						"login"
+						"register"
 					]
 				}
 			},
@@ -52,3 +39,4 @@
 		}
 	]
 }
+
